@@ -1,0 +1,16 @@
+p {
+    align-items: center;
+    justify-content: center;
+    color: burlywood;
+}
+form {
+    height: 125px;
+display: flex;
+margin-bottom: 50px;
+font-family: 'Times New Roman', Gadget, serif;
+font-size: 17px;
+font-weight: bold;
+color: burlywood;}
+body {
+    background-image:url("nature-landscape-with-starry-clear-sky.jpg");
+}

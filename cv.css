@@ -1,0 +1,135 @@
+    :root{
+    --primary:#4f46e5;
+    --secondary:#22c55e;
+    --bg:#f4f6fb;
+    --text:#1f2937;
+    --card:#ffffff;
+    }*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(120deg,#e0e7ff,#f0fdf4);
+    color:var(--text);
+    padding:40px;
+}
+
+.cv{
+  max-width:900px;
+  margin:auto;
+  background:var(--card);
+  display:grid;
+  grid-template-columns:280px 1fr;
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* SIDEBAR */
+.sidebar{
+  background:linear-gradient(180deg,var(--primary),#312e81);
+  color:#fff;
+  padding:30px 25px;
+}
+
+.profile{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.profile .avatar{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#a5b4fc,#22c55e);
+  margin:0 auto 15px;
+}
+
+.profile h1{
+  font-size:20px;
+  font-weight:600;
+}
+
+.profile p{
+  font-size:13px;
+  opacity:.85;
+}
+
+.sidebar h2{
+  font-size:15px;
+  margin:25px 0 10px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+.info li,
+.skills li{
+  list-style:none;
+  font-size:13px;
+  margin-bottom:8px;
+}
+
+.skills li{
+  background:rgba(255,255,255,0.15);
+  padding:6px 10px;
+  border-radius:20px;
+  display:inline-block;
+  margin:5px 5px 0 0;
+}
+
+/* MAIN */
+.main{
+  padding:35px 40px;
+  background:linear-gradient(180deg,#ffffff,#f8fafc);
+}
+
+.section{
+  margin-bottom:30px;
+}
+
+.section h2{
+  font-size:18px;
+  margin-bottom:15px;
+  color:var(--primary);
+  position:relative;
+}
+
+.section h2::after{
+  content:"";
+  width:40px;
+  height:3px;
+  background:var(--secondary);
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  border-radius:3px;
+}
+
+.item{
+  margin-bottom:15px;
+}
+
+.item h3{
+  font-size:15px;
+  font-weight:600;
+}
+
+.item span{
+  font-size:12px;
+  color:#6b7280;
+}
+
+.item p{
+  font-size:13px;
+  margin-top:5px;
+  line-height:1.6;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .cv{
+    grid-template-columns:1fr;
+  }
+  .sidebar{
+    text-align:center;
+  }
+}

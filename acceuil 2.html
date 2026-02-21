@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Site de DENAKPO Christian</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+/* ENTÊTE */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 30px;
+    background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+.logo{
+    width:120px;
+    height:80px;
+    object-fit:contain;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+.logo:hover{
+    transform: scale(1.1);
+}
+.titre{
+    background: linear-gradient(45deg, #ff6b6b, #feca57);
+    color:white;
+    font-weight:bold;
+    padding:15px 30px;
+    font-size:24px;
+    border-radius: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* CORPS */
+.contenu{
+    display:flex;
+    height:calc(100vh - 120px);
+    padding: 20px;
+    gap: 20px;
+}
+
+/* MENU */
+nav.menu {
+    width: 280px;
+    background: rgba(255, 255, 255, 0.95); 
+    color: #333; 
+    padding: 25px;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+    overflow-y: auto;
+}
+ 
+nav.menu h2 { 
+    font-size: 22px; 
+    margin-bottom: 20px;
+    color: #1e3c72;
+    text-align: center;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #667eea;
+} 
+
+nav.menu ul { 
+    list-style: none;
+    padding: 0;
+} 
+
+nav.menu ul li { 
+    margin: 12px 0; 
+    transition: transform 0.2s ease;
+} 
+
+nav.menu ul li:hover { 
+    transform: translateX(10px);
+} 
+
+nav.menu ul li a { 
+    color: #333;
+    text-decoration: none;
+    display: block; 
+    padding: 14px 20px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-left: 4px solid #667eea;
+} 
+
+nav.menu ul li a:hover { 
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* ZONE FRAME */
+.zone{
+    flex: 1;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    background: white;
+}
+
+iframe{
+    width:100%;
+    height:100%;
+    border: none;
+}
+
+/* BARRE DE DÉFILEMENT */
+.marquee { 
+    flex: 1;
+    overflow: hidden;
+    background: linear-gradient(90deg, #11998e, #38ef7d);
+    border-radius: 30px;
+    padding: 12px 0;
+    margin: 0 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+    
+.marquee span { 
+    display: inline-block; 
+    padding-left: 100%;
+    animation: defilement 12s linear infinite;
+    color: white;
+    font-weight: bold;
+    font-size: 28px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+@keyframes defilement { 
+    0% { transform: translateX(0); } 
+    100% { transform: translateX(-100%); } 
+}
+
+/* Style pour les images du menu */
+.menu-icon {
+    display: block;
+    margin: 0 auto 15px;
+    width: 50px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-10px);}
+    60% {transform: translateY(-5px);}
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contenu {
+        flex-direction: column;
+    }
+    
+    nav.menu {
+        width: 100%;
+        height: auto;
+    }
+    
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="images.png" class="logo" alt="Logo">
+    
+    <div class="marquee"> <span>BIENVENUE SUR LE SITE DE DENAKPO Christian</span> </div>
+    <img src="téléchargement (1).jfif" class="logo" alt="Logo">
+</header>
+
+<div class="contenu">
+
+    <!-- MENU -->
+
+    <nav class="menu">
+        <img src="menu.png" class="menu-icon" alt="Menu">
+        <h2>MENU</h2>
+        <ul>
+            
+            <li><a href="page1.html" target="cadre">📄 Page 1</a></li>
+            <li><a href="page2.html" target="cadre">📄 Page 2</a></li>
+            <li><a href="page3.html" target="cadre">📄 Page 3</a></li>
+            <li><a href="page4.html" target="cadre">📄 Page 4</a></li>
+            <li><a href="TABLEAU Général.html" target="cadre">📊 Tableau</a></li>
+            <li><a href="Formulaire.html" target="cadre">📝 Formulaire</a></li>
+            <li><a href="cv.html" target="cadre">👤 CV</a></li>
+               
+               
+        </ul>
+    </nav>
+
+    <!-- CASE D'AFFICHAGE -->
+    <div class="zone">
+        <iframe name="cadre"></iframe>
+    </div>
+
+</div>
+
+</body>
+</html>

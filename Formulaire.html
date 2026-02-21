@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire - DENAKPO Christian</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1e3c72;
+            font-size: 32px;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(255,255,255,0.5);
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+        }
+
+        form {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+
+        fieldset {
+            border: 3px solid #667eea;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+        }
+
+        legend {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        h2 {
+            color: #2a5298;
+            margin-bottom: 20px;
+            font-size: 22px;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus,
+        input[type="email"]:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-right: 10px;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            accent-color: #667eea;
+        }
+
+        input[type="checkbox"] + label,
+        input[type="radio"] + label {
+            display: inline;
+            font-weight: normal;
+            cursor: pointer;
+        }
+
+        .checkbox-group,
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .checkbox-group label,
+        .radio-group label {
+            display: flex;
+            align-items: center;
+            font-weight: normal;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 25px;
+        }
+
+        button[type="reset"],
+        button[type="submit"] {
+            padding: 15px 40px;
+            border: none;
+            border-radius: 25px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button[type="reset"] {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a5a 100%);
+            color: white;
+        }
+
+        button[type="submit"] {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: white;
+        }
+
+        button[type="reset"]:hover,
+        button[type="submit"]:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        optgroup {
+            font-weight: bold;
+            color: #1e3c72;
+        }
+
+        .info-section {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            border-left: 5px solid #667eea;
+        }
+
+        .info-section h2 {
+            border-bottom: none;
+            color: #667eea;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>📝 VEUILLEZ REMPLIR LE FORMULAIRE</h1>
+
+    <form method="post" action="traitement.php">
+        
+        <!-- Section Coordonnées -->
+        <fieldset>
+            <legend>👤 Vos coordonnées</legend>
+            
+            <p>
+                <label for="nom">Quel est votre nom ?</label>
+                <input type="text" name="nom" id="nom" tabindex="10" placeholder="Votre nom" />
+            </p>
+            
+            <p>
+                <label for="prenom">Quel est votre prénom ?</label>
+                <input type="text" name="prenom" id="prenom" tabindex="20" placeholder="Votre prénom" />
+            </p>
+            
+            <p>
+                <label for="email">Quel est votre e-mail ?</label>
+                <input type="email" name="email" id="email" tabindex="30" placeholder="votre@email.com" />
+            </p>
+            
+            <p>
+                <label for="pays">Dans quel pays habitez-vous ?</label>
+                <select name="pays" id="pays">
+                    <option value="">-- Sélectionnez un pays --</option>
+                    <optgroup label="Europe">
+                        <option value="france">France</option>
+                        <option value="espagne">Espagne</option>
+                        <option value="italie">Italie</option>
+                        <option value="royaume-uni">Royaume-Uni</option>
+                    </optgroup>
+                    <optgroup label="Amérique">
+                        <option value="canada">Canada</option>
+                        <option value="etats-unis">Etats-Unis</option>
+                    </optgroup>
+                    <optgroup label="Afrique">
+                        <option value="benin">Bénin</option>
+                        <option value="togo">Togo</option>
+                    </optgroup>
+                    <optgroup label="Asie">
+                        <option value="chine">Chine</option>
+                        <option value="japon">Japon</option>
+                    </optgroup>
+                </select>
+            </p>
+        </fieldset>
+
+        <!-- Section Tranche d'âge -->
+        <fieldset>
+            <legend>🎂 Votre âge</legend>
+            <p>Veuillez indiquer la tranche d'âge dans laquelle vous vous situez :</p>
+            <div class="radio-group">
+                <label><input type="radio" name="age" value="moins15" id="moins15" /> Moins de 15 ans</label>
+                <label><input type="radio" name="age" value="medium15-25" id="medium15-25" /> 15-25 ans</label>
+                <label><input type="radio" name="age" value="medium25-40" id="medium25-40" /> 25-40 ans</label>
+                <label><input type="radio" name="age" value="plus40" id="plus40" /> Plus de 40 ans</label>
+            </div>
+        </fieldset>
+
+        <!-- Section Continent -->
+        <fieldset>
+            <legend>🌍 Votre continent</legend>
+            <p>Sur quel continent habitez-vous ?</p>
+            <div class="radio-group">
+                <label><input type="radio" name="continent" value="europe" id="europe" /> Europe</label>
+                <label><input type="radio" name="continent" value="afrique" id="afrique" /> Afrique</label>
+                <label><input type="radio" name="continent" value="asie" id="asie" /> Asie</label>
+                <label><input type="radio" name="continent" value="amerique" id="amerique" /> Amérique</label>
+                <label><input type="radio" name="continent" value="australie" id="australie" /> Australie</label>
+            </div>
+        </fieldset>
+
+        <!-- Section Aliments -->
+        <fieldset>
+            <legend>🍕 Vos préférences alimentaires</legend>
+            <p>Cochez les aliments que vous aimez manger :</p>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="frites" id="frites" /> 🍟 Frites</label>
+                <label><input type="checkbox" name="steak" id="steak" /> 🥩 Steak haché</label>
+                <label><input type="checkbox" name="epinards" id="epinards" /> 🥬 Epinards</label>
+                <label><input type="checkbox" name="huitres" id="huitres" /> 🦪 Huitres</label>
+                <label><input type="checkbox" name="poisson" id="poisson" /> 🐟 Poisson</label>
+                <label><input type="checkbox" name="legumes" id="legumes" /> 🥕 Légumes</label>
+            </div>
+        </fieldset>
+
+        <!-- Section Souhait -->
+        <fieldset>
+            <legend>⭐ Votre souhait</legend>
+            <p>Faites un souhait que vous voudriez voir exaucé :</p>
+            <div class="radio-group">
+                <label><input type="radio" name="souhait" value="riche" id="riche" /> 💰 Etre riche</label>
+                <label><input type="radio" name="souhait" value="celebre" id="celebre" /> ⭐ Etre célèbre</label>
+                <label><input type="radio" name="souhait" value="intelligent" id="intelligent" /> 🧠 Etre encore plus intelligent</label>
+                <label><input type="radio" name="souhait" value="autre" id="autre" /> ✨ Autre...</label>
+            </div>
+            <p style="margin-top: 15px;">
+                <label for="precisions">Si "Autre", veuillez préciser :</label>
+                <textarea name="precisions" id="precisions" cols="40" rows="4" placeholder="Décrivez votre souhait..."></textarea>
+            </p>
+        </fieldset>
+
+        <!-- Section Amélioration du site -->
+        <fieldset>
+            <legend>💡 Amélioration du site</legend>
+            <p>
+                <label for="ameliorer">Comment pensez-vous que je pourrais améliorer mon site ?</label>
+                <textarea name="ameliorer" id="ameliorer" rows="6" placeholder="Vos suggestions..."></textarea>
+            </p>
+        </fieldset>
+
+        <!-- Boutons -->
+        <div class="buttons">
+            <button type="reset">🔄 Annuler</button>
+            <button type="submit">📤 Envoyer</button>
+        </div>
+
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+h1 {
+background-color: rgb(142, 255, 127);
+text-decoration: underline;
+width: 1400px;
+height: 100px;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-bottom: 20px;
+font-family: 'Times New Roman', Gadget, serif;
+font-size: 25px;
+color: burlywood;
+
+}
+h2 {
+    color: violet;
+}
+body {
+    background-image:url("007.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat:no-repeat;
+    }
+div {
+    color: #f6fffa20;
+}
+span {
+    color: #333333;
+}

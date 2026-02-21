@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Tableaux améliorés</title>
+    <style>
+        body{
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background: #f4f6f9;
+            margin: 0;
+            padding: 40px;
+            color: #333;
+        }
+
+        h2{
+            text-align: center;
+            margin: 50px 0 20px;
+            color: #2c3e50;
+        }
+
+        table{
+            width: 80%;
+            margin: 30px auto;
+            border-collapse: collapse;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            background: #fff;
+        }
+
+        th, td{
+            padding: 15px 20px;
+            text-align: center;
+            border: 2px solid #2c3e50;
+        }
+
+        thead{
+            background: linear-gradient(135deg, #2980b9, #6dd5fa);
+            color: white;
+            font-size: 18px;
+        }
+
+        tbody tr:nth-child(even){
+            background-color: #f2f2f2;
+        }
+
+        tbody tr:hover{
+            background-color: #e8f4fd;
+            transition: 0.3s;
+        }
+
+        tfoot{
+            background: #ecf0f1;
+            font-weight: bold;
+        }
+
+        /* Tableau lettres */
+        .letters td{
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .A{background:#1abc9c}
+        .B{background:#3498db}
+        .C{background:#9b59b6}
+        .D{background:#f39c12}
+        .E{background:#e74c3c}
+        .F{background:#2ecc71}
+
+        .total{
+            background: #34495e;
+            color: white;
+            font-size: 20px;
+        }
+
+        .special th{
+            background:#f1c40f;
+            color:#2c3e50;
+            font-size:18px;
+        }
+
+        /* Texte vertical et oblique */
+        .vertical{
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            font-weight: bold;
+        }
+
+        .oblique-asc{
+            display: inline-block;
+            transform: rotate(-45deg);
+            font-weight: bold;
+        }
+
+        .oblique-desc{
+            display: inline-block;
+            transform: rotate(45deg);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Tableau lettres -->
+<table class="letters">
+    <tr>
+        <td class="A">A</td>
+        <td class="B">B</td>
+        <td class="C">C</td>
+    </tr>
+    <tr>
+        <td class="F">F</td>
+        <td class="E">E</td>
+        <td class="D">D</td>
+    </tr>
+</table>
+
+<h2>Liste des produits</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Désignations</th>
+            <th>Quantités</th>
+            <th>Prix</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>x₁</td>
+            <td>20</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td>x₂</td>
+            <td>10</td>
+            <td>30</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="2">TOTAL</td>
+            <td class="total">70</td>
+        </tr>
+    </tfoot>
+</table>
+
+<h2>Passagers du vol 377</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Âge</th>
+            <th>Pays</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>Carmen</td><td>33</td><td>Espagne</td></tr>
+        <tr><td>Michelle</td><td>26</td><td>États-Unis</td></tr>
+        <tr><td>François</td><td>43</td><td>France</td></tr>
+        <tr><td>Martine</td><td>34</td><td>France</td></tr>
+        <tr><td>Jonathan</td><td>13</td><td>Australie</td></tr>
+        <tr><td>Xu</td><td>19</td><td>Chine</td></tr>
+    </tbody>
+</table>
+
+<h2>PIGIER – Spécialités</h2>
+<table class="special">
+    <thead>
+        <tr>
+            <th colspan="2">PIGIER</th>
+            <th colspan="2">SPÉCIALITÉS</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="3" class="vertical">MARCHÉ</td>
+            <td>RGL</td>
+            <td colspan="2">RMS</td>
+        </tr>
+        <tr>
+            <td rowspan="2"><span class="oblique-asc">IAOC</span></td>
+            <td rowspan="2"><span class="oblique-desc">DAS</span></td>
+            <td>CIB</td>
+        </tr>
+        <tr>
+            <td>GTL</td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
